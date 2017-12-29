@@ -1,0 +1,1596 @@
+/*
+Theme Name: Inverspot
+Theme URI: inverspot.mx
+Description: Tema inverspot.mx
+Author: Alchimia
+Author URI: alchimia.mx
+Version: 1.0
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+Base
+
+General Settings, fonts , line-height and layout
+
+Styleguide 1.0.0
+*/
+
+@font-face {
+  font-family: 'Avenirnext';
+  src: url(fonts/AvenirNext-Regular.ttf), url(fonts/AvenirNext-Regular.eot), url(fonts/AvenirNext-Regular.otf), url(fonts/AvenirNext-Regular.svg), url(fonts/AvenirNext-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Avenirnext-bold';
+  src: url(fonts/AvenirNext-Bold.ttf), url(fonts/AvenirNext-Bold.eot), url(fonts/AvenirNext-Bold.otf), url(fonts/AvenirNext-Bold.svg), url(fonts/AvenirNext-Bold.woff);
+}
+
+@font-face {
+  font-family: 'Avenirnext-medium';
+  src: url(fonts/AvenirNext-Medium.ttf), url(fonts/AvenirNext-Medium.eot), url(fonts/AvenirNext-Medium.otf), url(fonts/AvenirNext-Medium.svg), url(fonts/AvenirNext-Medium.woff);
+}
+
+html {
+  font-family: 'Avenirnext', sans-serif;
+}
+
+b {
+	font-family: 'Avenirnext-medium', sans-serif;
+}
+
+strong {
+	font-family: 'Avenirnext-bold', sans-serif;
+}
+
+body {
+	line-height: 1.5;
+}
+
+/*
+Layout
+
+spot-l-container - general container for all the proyect
+
+Styleguide 1.1.0
+*/
+
+.spot-l-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.spot-l-container--menu {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.spot-l-top-bar {
+  display: inline-block;
+}
+
+.spot-l-top-bar {
+  display: none;
+}
+
+.spot-l-container-collapsed {
+  padding: 0 16px;
+}
+
+.spot-l-menu__footer {
+  width: 100%;
+}
+
+.spot-l-menu__footer ul li a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.spot-l-brand-sitemap__item {
+  width: 100%;
+}
+
+/*
+Typographys
+
+display, title & headings are defined
+
+Styleguide 2.0.0
+*/
+
+.spot-display {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.spot-title {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.spot-h1, .spot-c-user-entry h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.spot-h2, .spot-c-user-entry h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.spot-h3, .spot-c-user-entry h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.spot-h4, .spot-c-user-entry h4 {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.spot-u-font-footer {
+    font-size: 11px;
+    line-height: 16px;
+}
+
+/*
+ Colors
+
+--color-name - variables used to define colors of all the proyect
+
+Styleguide 3.0.0
+*/
+
+:root {
+  --color-primary: #4b118b; /*Morado*/
+  --color-base: #ff3e00; /*Naranja*/
+  --color-complementary: #81d442; /* Verde*/
+  --color-gray-dark: rgba(0, 0, 0, 0.87);
+  --color-gray-light: lightgray;
+  --color-white: #ffffff;
+  --color-blue: #5fb6b0;
+  --color-blue-light: #f7f9f9;
+  --color-blue-alt: #103a56; /*Azul petróleo*/
+  --color-mustard-alt: rgb(204,138,0); /*Mostaza*/
+}
+
+.spot-u-fill--primary {
+  background-color: var(--color-primary);
+}
+
+.spot-u-fill--complementary {
+  background-color: var(--color-complementary);
+}
+
+.spot-u-fill--base {
+  background-color: var(--color-base);
+}
+
+.spot-u-fill--gray-dark {
+  background-color: var(--color-gray-dark);
+}
+
+.spot-u-fill--gray-light {
+  background-color: var(--color-gray-light);
+}
+
+.spot-u-fill--white {
+  background-color: var(--color-white);
+}
+
+.spot-u-fill--blue {
+  background-color: var(--color-blue);
+}
+
+.spot-u-fill--blue-alt {
+  background-color: var(--color-blue-alt);
+}
+
+.spot-u-fill--blue-light {
+  background-color: var(--color-blue-light);
+}
+
+.spot-u-fill--mustard-alt {
+  background-color: var(--color-mustard-alt);
+}
+
+.spot-u-fill--gray-light-opacity {
+  background-color: rgba(211,211,211,0.2);
+}
+
+.spot-u-color--primary {
+  color: var(--color-primary)
+}
+
+.spot-u-color--complementary {
+  color: var(--color-complementary)
+}
+
+.spot-u-color--base {
+  color: var(--color-base);
+}
+
+.spot-u-color--gray-dark {
+  color: var(--color-gray-dark);
+}
+
+.spot-u-color--gray-light {
+  color: var(--color-gray-light);
+}
+
+.spot-u-color--white {
+  color: var(--color-white);
+}
+
+.spot-u-color--blue {
+  color: var(--color-blue);
+}
+
+.spot-u-color--blue-light {
+  color: var(--color-blue-light);
+}
+
+.spot-u-color--blue-alt {
+  color: var(--color-blue-alt);
+}
+
+.spot-u-color--mustard {
+  color: var(--color-mustard-alt);
+}
+
+.spot-u-border-color--gray-light {
+  border-color: var(--color-gray-light) !important;
+}
+
+.spot-u-border-color--primary {
+  border-color: var(--color-primary) !important;
+}
+
+.spot-u-border-color--base {
+  border-color: var(--color-base) !important;
+}
+
+.spot-u-border-color--mustard-alt {
+  border-color: var(--color-mustard-alt) !important;
+}
+
+.spot-u-border-color--blue-alt {
+  border-color: var(--color-blue-alt) !important;
+}
+
+/*
+Components
+
+
+Here are specified all components styles used inside de Inverspot proyect
+
+
+Styleguide 4.0.0
+*/
+
+.spot-c-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Avenirnext';
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.spot-c-list, .spot-c-user-entry ul {
+  list-style: inside !important;
+}
+
+.spot-c-list--bare {
+  list-style: none;
+}
+
+
+.spot-c-md-box-item {
+  width: 100%;
+}
+
+.spot-c-md-box-item {
+  width: 100%;
+}
+
+.spot-c-card--h-224px {
+  height: 224px;
+}
+
+.spot-c-card--h-272px {
+  height: 272px;
+}
+
+.spot-c-card__item {
+  width: 100%;
+}
+
+.spot-c-card__item:hover .spot-u-fill--primary{
+  background-color: var(--color-base);
+}
+
+.spot-c-card__item:hover div.spot-c-card--h-272px > p {
+  color: var(--color-gray-dark);
+}
+
+.spot-c-container-squeare--72px {
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  border: 8px solid white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 16px;
+}
+
+.spot-c-corner {
+  border-style: solid;
+  border-width: 0 70px 40px 0;
+  float: right;
+  height: 0px;
+  width: 0px;
+  border-color: transparent var(--color-primary) transparent transparent;
+}
+
+.spot-c-corner--color-base {
+  border-style: solid;
+  border-width: 0 70px 40px 0;
+  float: right;
+  height: 0px;
+  width: 0px;
+  border-color: transparent var(--color-base) transparent transparent;
+}
+
+.spot-c-corner__inside {
+  position: relative;
+  right: -40px;
+  top: 2px;
+  transform: rotate(30deg);
+}
+
+.spot-c-postit {
+  width: 100%;
+  height: 264px;
+}
+
+.spot-c-postit:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.1)
+}
+
+.spot-c-full-form {
+  width: 100%;
+}
+
+.spot-c-adress-container {
+  width: 100%;
+}
+
+.spot-c-faqs-container {
+  width: 100%;
+}
+
+.spot-c-casos-item {
+  width: 280px;
+}
+
+.spot-c-casos-item__text-center {
+  position: absolute;
+  margin-top: -204px;
+  margin-left: 56px;
+}
+
+.spot-c-casos-item__footer-info_right {
+  width: 40%;
+}
+
+.spot-c-casos-item__footer-info_left {
+  width: 60%;
+}
+
+.spot-c-contaier--25 {
+  width: 100%;
+}
+
+.spot-c-card:hover {
+  color: ;
+}
+
+.spot-c-casos-item__img--background-picture-size{
+  width: 280px;
+  height: 320px;
+}
+
+.spot-c-coach-container {
+  width: 100%;
+}
+
+.spot-c-youtube-video {
+  width: 100%;
+  height: 200px;
+}
+
+.spot-c-article__item {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.spot-c-mask {
+  background-color: rgba(170,170,170,0.9);
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.4s ease-out 0s;
+  opacity: 0;
+}
+
+.spot-c-article__item:hover .spot-c-mask {
+	width: 100%;
+	opacity: 1;
+}
+
+.spot-c-mask__button--position {
+  position: relative;
+  top: 45%;
+  left: 30%;
+}
+
+.spot-c-sucursal__item {
+  width: 100%;
+}
+
+.spot-c-info-icon {
+  width: 100%;
+}
+
+.spot-c-header__button {
+  border: none;
+  padding: 0px;
+  margin-left: 1rem;
+}
+
+
+
+.spot-c-header__button {
+  border: none;
+  padding: 0px;
+  margin-left: 1rem;
+}
+
+.spot-c-banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-c-banner__img .spot-u-fill-img-community {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/1.png);
+}
+
+.spot-c-banner__img .spot-u-fill-img-yay {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/2.png);
+}
+
+.spot-c-banner__img .spot-u-ratio-img {
+    padding-top: 29.5%;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    background-size: 100%;
+}
+
+.spot-c-mini-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 88px;
+}
+
+.spot-c-mini-icons__icon {
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+}
+
+.spot-c-mini-icons__icon.spot-c-mini-icons__icon--tw {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/Twitter.png);
+}
+.spot-c-mini-icons__icon.spot-c-mini-icons__icon--fb {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/Facebook.png);
+}
+.spot-c-mini-icons__icon.spot-c-mini-icons__icon--li {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/Linkedin.png);
+}
+.spot-c-mini-icons__icon.spot-c-mini-icons__icon--yt {
+    background-image: url(https://inverspot.mx/wp-content/themes/is-theme/img/YouTube.png);
+}
+
+.spot-c-mini-icons__icon.spot-c-mini-icons__icon--primary-dot {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.spot-c-casos__img-top {
+  display: none;
+}
+
+.spot-c-casos__titles {
+  width: 100%;
+}
+
+.spot-u-casos__info {
+  width: 100%;
+}
+
+.spot-c-casos__info-img {
+  width: 100%;
+}
+
+/*
+Utilities
+
+Here are specified all utilities styles used inside de Inverspot proyect
+
+Styleguide 5.0.0
+*/
+
+.spot-u-border--0 {
+  border: 0;
+}
+
+.spot-u-border--1 {
+  border: 1px solid;
+}
+
+.spot-u-border--2 {
+  border: 2px solid;
+}
+
+.spot-u-border-left--1 {
+  border-left: 1px solid;
+}
+
+.spot-u-border-left--2 {
+  border-left: 2px solid;
+}
+
+.spot-u-border-right--1 {
+  border-right: 1px solid;
+}
+
+.spot-u-border-right--2 {
+  border-right: 2px solid;
+}
+
+.spot-u-border-top--1 {
+  border-top: 1px solid;
+}
+
+.spot-u-border-top--2 {
+  border-top: 2px solid;
+}
+
+.spot-u-border-bottom--1 {
+  border-bottom: 1px solid;
+}
+
+.spot-u-border-bottom--2 {
+  border-bottom: 2px solid;
+}
+
+.spot-u-border-bottom--3 {
+  border-bottom: 3px solid;
+}
+
+.spot-u-border-bottom--dotted-1 {
+  border-bottom: 1px;
+  border-bottom-style: dotted;
+}
+
+.spot-u-radius--half {
+  border-radius: 4px;
+}
+
+.spot-u-radius {
+  border-radius: 8px;
+}
+
+.spot-u-radius--pill {
+  border-radius: 24px;
+}
+
+.spot-u-radius--circle {
+  border-radius: 100%;
+}
+
+.spot-u-radius-top-left-right {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+
+.spot-u-shadow--gray-light {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.spot-u-margin--0 {
+  margin: 0;
+}
+
+.spot-u-margin--1 {
+  margin: 8px;
+}
+
+.spot-u-margin--2 {
+  margin: 16px;
+}
+
+.spot-u-margin--3 {
+  margin: 32px;
+}
+
+.spot-u-margin--auto {
+  margin: auto;
+}
+
+.spot-u-margin-x--0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.spot-u-margin-x--1 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.spot-u-margin-x--2 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.spot-u-margin-x--3 {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.spot-u-margin-y--0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.spot-u-margin-y--1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.spot-u-margin-y--2 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.spot-u-margin-y--3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.spot-u-margin-y--4 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.spot-u-margin-y--5 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.spot-u-margin-top--0 {
+  margin-top: 0;
+}
+
+.spot-u-margin-top--1 {
+  margin-top: 8px;
+}
+
+.spot-u-margin-top--2 {
+  margin-top: 16px;
+}
+
+.spot-u-margin-top--3 {
+  margin-top: 32px;
+}
+
+.spot-u-margin-top--4 {
+  margin-top: 40px;
+}
+
+.spot-u-margin-top--auto {
+  margin-top: auto;
+}
+
+.spot-u-margin-bottom--0 {
+  margin-bottom: 0;
+}
+
+.spot-u-margin-bottom--1 {
+  margin-bottom: 8px;
+}
+
+.spot-u-margin-bottom--2 {
+  margin-bottom: 16px;
+}
+
+.spot-u-margin-bottom--3 {
+  margin-bottom: 32px;
+}
+
+.spot-u-margin-bottom--auto {
+  margin-bottom: auto;
+}
+
+.spot-u-margin-right--0 {
+  margin-right: 0;
+}
+
+.spot-u-margin-right--1 {
+  margin-right: 8px;
+}
+
+.spot-u-margin-right--2 {
+  margin-right: 16px;
+}
+
+.spot-u-margin-right--3 {
+  margin-right: 32px;
+}
+
+.spot-u-margin-right--auto {
+  margin-right: auto;
+}
+
+.spot-u-margin-left--0 {
+  margin-left: 0;
+}
+
+.spot-u-margin-left--1 {
+  margin-left: 8px;
+}
+
+.spot-u-margin-left--2 {
+  margin-left: 16px;
+}
+
+.spot-u-margin-left--3 {
+  margin-left: 32px;
+}
+
+.spot-u-margin-left--auto {
+  margin-left: auto;
+}
+
+.spot-u-padding--0 {
+  padding: 0;
+}
+
+.spot-u-padding--1 {
+  padding: 8px;
+}
+
+.spot-u-padding--2 {
+  padding: 16px;
+}
+
+.spot-u-padding--3 {
+  padding: 32px;
+}
+
+.spot-u-padding--4 {
+  padding: 40px;
+}
+
+.spot-u-padding--5 {
+  padding: 48px;
+}
+
+.spot-u-padding--auto {
+  padding: auto;
+}
+
+.spot-u-padding-x--0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.spot-u-padding-x--1 {
+  padding: 0 8px 0 8px;
+}
+
+.spot-u-padding-x--2 {
+  padding: 0 16px 0 16px;
+}
+
+.spot-u-padding-x--3 {
+  padding: 0 32px 0 32px;
+}
+
+.spot-u-padding-y--0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.spot-u-padding-y--1 {
+  padding: 8px 0 8px 0 ;
+}
+
+.spot-u-padding-y--2 {
+  padding: 16px 0 16px 0;
+}
+
+.spot-u-padding-y--3 {
+  padding: 32px 0 32px 0;
+}
+
+.spot-u-padding-top--0 {
+  padding-top: 0;
+}
+
+.spot-u-padding-top--1 {
+  padding-top: 8px;
+}
+
+.spot-u-padding-top--2 {
+  padding-top: 16px;
+}
+
+.spot-u-padding-top--3 {
+  padding-top: 32px;
+}
+
+.spot-u-padding-top--auto {
+  padding-top: auto;
+}
+
+.spot-u-padding-bottom--0 {
+  padding-bottom: 0;
+}
+
+.spot-u-padding-bottom--1 {
+  padding-bottom: 8px;
+}
+
+.spot-u-padding-bottom--2 {
+  padding-bottom: 16px;
+}
+
+.spot-u-padding-bottom--3 {
+  padding-bottom: 32px;
+}
+
+.spot-u-padding-bottom--auto {
+  padding-bottom: auto;
+}
+
+.spot-u-padding-right--0 {
+  padding-right: 0;
+}
+
+.spot-u-padding-right--1 {
+  padding-right: 8px;
+}
+
+.spot-u-padding-right--2 {
+  padding-right: 16px;
+}
+
+.spot-u-padding-right--3 {
+  padding-right: 32px;
+}
+
+.spot-u-padding-right--auto {
+  padding-right: auto;
+}
+
+.spot-u-padding-left--0 {
+  padding-left: 0;
+}
+
+.spot-u-padding-left--1 {
+  padding-left: 8px;
+}
+
+.spot-u-padding-left--2 {
+  padding-left: 16px;
+}
+
+.spot-u-padding-left--3 {
+  padding-left: 32px;
+}
+
+.spot-u-padding-left--auto {
+  padding-left: auto;
+}
+
+.spot-u-top-bar--padding {
+  padding: 4px 0;
+}
+
+
+.spot-u-text-align--center {
+  text-align: center;
+}
+
+.spot-u-text-align--justify {
+  text-align: justify;
+}
+
+.spot-u-text-align--right {
+  text-align: right;
+}
+
+.spot-u-text-align--left {
+  text-align: left;
+}
+
+
+
+.spot-u-text-decoration--underline {
+  text-decoration: underline;
+}
+
+.spot-u-text-decoration--none {
+  text-decoration: none;
+}
+
+
+.spot-u-text-transform--uppercase {
+  text-transform: uppercase;
+}
+
+.spot-u-text-transform--lowercase {
+  text-transform: lowercase;
+}
+
+.spot-u-text-transform--capitalize {
+  text-transform: capitalize;
+}
+
+
+
+.spot-u-display--block {
+  display: block;
+}
+
+.spot-u-display--inline-block {
+  display: inline-block;
+}
+
+.spot-u-display--flex {
+  display: flex;
+}
+
+.spot-u-display--none {
+  display: none;
+}
+
+.spot-u-justify-content--center {
+  justify-content: center;
+}
+
+.spot-u-justify-content--space-between {
+  justify-content: space-between;
+}
+
+.spot-u-justify-content--space-around {
+  justify-content: space-around;
+}
+
+.spot-u-flex-wrap--wrap {
+  flex-wrap: wrap;
+}
+
+
+.spot-u-img-responsive {
+  width: 248px;
+  height: auto;
+}
+
+
+
+.spot-u-map {
+  width: 100%;
+  height: 288px;
+}
+
+
+
+.spot-u-opacity-0 {
+  opacity: 0.2;
+}
+
+.spot-u-opacity-1 {
+  opacity: 0.2;
+}
+
+.spot-u-opacity-2 {
+  opacity: 0.4;
+}
+
+
+.spot-u-float--right {
+  float: right;
+}
+
+.spot-u-float--left {
+  float: left;
+}
+
+
+.spot-u-coach__img--size {
+  width: 180px;
+  height: 180px;
+}
+
+.spot-u-img-responsive {
+  width: 100%;
+}
+
+.spot-u-img--200px {
+  width: 200px;
+}
+
+.spot-u-img--64px {
+  width: 64px;
+  height: 64px;
+}
+
+.spot-u-img--288px {
+  width: 288px;
+  height: 288px;
+}
+
+.spot-u-hover-button-first:hover {
+	background-color: #f1cfb0;
+}
+
+.spot-u-hover-button-second:hover {
+	background-color: var(--color-base);
+}
+
+.spot-u-hover-button-third:hover {
+	background-color: var(--color-primary);
+}
+
+.spot-u-vimeo-video--size {
+  width: 100%;
+}
+
+.spot-u-bg--static {
+  background-image: url("http://wp.inverspot.mx/wp-content/uploads/2017/12/2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-position: center;
+}
+
+.spot-u-bg-unete--static {
+  background-image: url("https://inverspot.mx/wp-content/uploads/2017/12/join.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 256%;
+  padding-bottom: 128px;
+  height: 300px;
+  margin-bottom: 100px;
+}
+
+.spot-u-margin--280 {
+  margin-top: 280px;
+}
+
+.spot-u-unete__header_img--right {
+  width: 86px;
+  height: 32px;
+}
+
+.spot-u-unete__header_img--left {
+  width: 48px;
+  height: 48px;
+}
+
+.spot-u-unete__container_img-cup--size {
+  width: 250px;
+  height: 250px;
+}
+
+.spot-u-unete__container_img-cup {
+  float: right;
+  position: relative;
+  top: 160px;
+}
+
+.spot-u-unete__header_text {
+  font-size: 12px;
+  margin: 8px;
+}
+
+.spot-u-home__footer_img--size {
+  width: 288px;
+  height: auto;
+}
+
+.spot-u-home__footer_img--right {
+  text-align: center;
+}
+
+.spot-u-home__footer_img--left {
+  text-align: center;
+}
+
+.spot-u-width--full {
+  width: 100%;
+}
+
+
+
+.spot-u-width--full {
+  width: 100%;
+}
+
+.spot-u-position--relative {
+  position: relative;
+}
+
+.spot-u-abs-bottom-right {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.spot-u-cifra__img {
+	height: 96px;
+	width: auto;
+}
+
+.spot-c-faqs-contatier {
+	width: 100%;
+}
+/*-----------------------------------------------
+Menú style
+-----------------------------------------------*/
+.menu {
+  display: none;
+  width: 100%;
+  padding: 32px 0 32px 16px;
+	margin: 74px 0 0 -16px;
+	position: absolute;
+}
+
+#menu-principal li.current-menu-item a{
+	color: var(--color-complementary);
+}
+
+.menu ul li a {
+  display: block;
+	color: var(--color-white);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.menu ul li {
+	margin-bottom: 16px;
+}
+
+.menu__items {
+	margin-top: 0px;
+}
+
+.brand__image--primary {
+  height: 40px;
+}
+
+.brand__image--white {
+  height: 35px;
+}
+
+.spot-l-menu--responsive {
+	width: 100%;
+}
+/*-----------------------------------------------
+Ninja form style
+.nf-form-layout color y borde al contenedor del form
+.nf-form-content padding para centrar los elementos dentro del contenedor
+.nf-field-element input alto de los input del form
+-----------------------------------------------*/
+.nf-form-layout {
+background-color: #f2f2f2;
+border-radius: 8px;
+margin-right: 16px;
+}
+
+.nf-form-content {
+	padding: 24px 24px 72px 24px;
+}
+
+.nf-field-element input {
+	padding: 8px;
+}
+
+/*-----------------------------------------------
+FAQs
+-----------------------------------------------*/
+
+.faq-main {
+    border-color: #4B118E !important;
+    padding: 4px !important!;
+    font-weight: bold !important;
+    color: #4B118E !important;
+	}
+/*-----------------------------------------------*/
+
+/*
+Responsive
+
+General Settings, fonts , line-height and layout
+
+Styleguide 6.0.0
+*/
+
+@media screen and (min-width: 544px) {
+  .spot-c-card__item {
+    width: 40%;
+  }
+
+  .spot-c-youtube-video {
+    height: 288px;
+  }
+
+  .spot-c-article__item {
+    width: 49%;
+  }
+
+  .spot-u-vimeo-video--size {
+    width: 100%;
+    height: 248px;
+  }
+
+  .spot-u-unete__header_text {
+    font-size: 16px;
+    margin: 8px;
+  }
+
+  .spot-u-bg-unete--static {
+    background-size: 190%;
+  }
+
+  .spot-u-unete__container_img-cup--size {
+    width: 300px;
+    height: 300px;
+  }
+
+	.spot-c-casos__img-top {
+		display: block;
+		width: 25%;
+	}
+
+	.spot-c-casos__titles {
+		width: 75%;
+
+	}
+
+}
+
+@media screen and (min-width: 750px) {
+  .spot-c-md-box-item {
+    width: 33.3%;
+  }
+
+  .spot-c-postit {
+    width: 30%;
+  }
+
+  .spot-c-contaier--25 {
+    width: 50%;
+  }
+
+  .spot-c-youtube-video {
+    width: 49%;
+    height: 200px;
+  }
+
+  .spot-c-info-icon {
+    width: 49%;
+  }
+
+  .spot-u-unete__header_text {
+    font-size: 24px;
+    margin: 8px;
+  }
+
+  .spot-u-bg-unete--static {
+    background-size: 125%;
+  }
+
+  .spot-u-unete__header_img--right {
+    width: 133px;
+    height: 52px;
+  }
+
+  .spot-u-unete__header_img--left {
+    width: 68px;
+    height: 68px;
+  }
+
+  .spot-u-unete__container_img-cup {
+    top: 120px;
+  }
+
+	.spot-u-home__footer_img--size {
+    width: 232px;
+    height: auto;
+  }
+
+	.spot-u-home__footer_img--right {
+	  text-align: right;
+	}
+
+	.spot-u-home__footer_img--left {
+	  text-align: left;
+	}
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .spot-c-coach-container {
+    width: 49%;
+  }
+
+  .spot-c-youtube-video {
+    width: 49%;
+    height: 250px;
+  }
+
+  .spot-c-article__item {
+    width: 24.8%;
+  }
+
+  .spot-c-mask__button--position {
+    position: relative;
+    top: 45%;
+    left: 25%;
+  }
+
+	.spot-c-banner {
+    flex-direction: row;
+  }
+
+  .spot-c-banner__img {
+    width: 500px;
+    flex-shrink: 0;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .spot-c-card__item {
+    width: 25%;
+  }
+
+  .spot-c-postit {
+    width: 23%;
+  }
+
+  .spot-c-postit--30 {
+    width: 30%;
+  }
+
+  .spot-c-full-form {
+		width: 75%;
+	}
+
+	.spot-c-faqs-contatier {
+    width: 70%;
+  }
+
+  .spot-c-adress-container {
+    width: 25%;
+  }
+
+  .spot-c-faqs-container {
+    width: 48%;
+  }
+
+  .spot-c-contaier--25 {
+    width: 25%;
+  }
+
+  .spot-c-sucursal__item {
+    width: 33%;
+  }
+
+  .spot-c-info-icon {
+    width: 24%;
+  }
+
+  .spot-u-unete__header_text {
+    font-size: 24px;
+    margin: 8px;
+  }
+
+  .spot-u-bg-unete--static {
+    background-size: 106%;
+    padding-bottom: 320px;
+  }
+
+  .spot-u-unete__header_img--right {
+    width: 197px;
+    height: 72px;
+  }
+
+  .spot-u-unete__header_img--left {
+    width: 88px;
+    height: 88px;
+  }
+
+  .spot-u-unete__container_img-cup {
+    top: 170px;
+  }
+
+  .spot-u-unete__container_img-cup--size {
+    width: 500px;
+    height: 500px;
+  }
+
+	.spot-c-casos__left {
+		width: 60%;
+	}
+	.spot-c-casos__right {
+		width: 40%;
+	}
+
+	.spot-c-faqs-contatier {
+		width: 49%;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .spot-c-youtube-video {
+    width: 49%;
+    height: 288px;
+  }
+
+  .spot-c-header__button {
+    display: none;
+  }
+
+  .spot-l-top-bar {
+    display: flex;
+  }
+
+  .spot-l-container-collapsed {
+    padding: 0px;
+  }
+
+  .spot-l-menu__footer {
+    height: auto;
+    width: auto;
+  }
+
+  .spot-l-brand-sitemap__item {
+    width: 25%;
+  }
+
+	.nav-bar__collapsed {
+		display: none;
+	}
+
+	.menu {
+		display: inline-flex !important;
+		width: auto;
+		position: unset;
+		margin: 0px;
+		padding: 0px;
+	}
+
+  .menu ul li {
+    display: inline;
+		margin-left: 16px;
+  }
+
+	.menu ul li a:hover {
+	  color: var(--color-complementary);
+	}
+
+	.menu ul li:hover {
+		border-style: solid;
+	  border-top-width: 1px;
+	  border-top-color: var(--color-complementary);
+	  color: var(--color-complementary);
+		padding-top: 8px;
+	}
+
+	#menu-principal li.current-menu-item {
+		border-style: solid;
+	  border-top-width: 1px;
+	  border-top-color: var(--color-complementary);
+		padding-top: 8px;
+	}
+
+  .menu ul li a {
+    display: unset;
+  }
+
+	.spot-l-menu--responsive {
+		width: auto;
+	}
+
+	.spot-u-home__footer_img--size {
+    width: 288px;
+    height: auto;
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+	.menu ul li {
+		display: inline;
+		margin-left: 8px;
+	}
+}
